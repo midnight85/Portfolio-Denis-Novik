@@ -1,0 +1,38 @@
+.contacts {
+    padding: 114px 0 120px 0;
+    text-align: center;
+    &__title {
+        margin-bottom: 20px;
+    }
+    &__message {
+        width: 316px;
+        margin: 0 auto;
+        margin-bottom: 85px;
+        &__text {
+            margin-bottom: 30px;
+        }
+        &__btn {
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 22px;
+            padding: 11px 30px;
+            color: #fff;
+            background-color: #000;
+            border-radius: 50px;
+        }
+    }
+    &__social {
+        &__img {
+            margin: 0 auto;
+            margin-bottom: 45px;
+            max-width: 342px;
+            display: flex;
+            justify-content: space-between;
+        }
+        &__text {
+            font-size: 14px;
+            line-height: 17px;
+            color: #828282;
+        }
+    }
+}

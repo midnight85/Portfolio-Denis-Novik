@@ -1,0 +1,71 @@
+.header {
+    
+    padding-bottom: 104px;
+
+    &-menu {
+        padding: 33px 0 32px 0;
+        border-bottom: 1px solid $textGrey;
+    }
+    .menu-list {
+        display: flex;
+        justify-content: space-between;
+
+        a {
+            @include font(18, 700);
+            line-height: 22px;
+            color: $textGrey;
+            transition: ease 0.3s;
+            &:hover {
+                color: $textBlack;
+            }
+        }
+    }
+    &-text {
+        display: flex;
+        justify-content: space-between;
+        padding: 40px 0;
+        &-name {
+            @include font(47, 700);
+            line-height: 59px;
+            width: 124px;
+        }
+        &-about {
+            font-size: 18px;
+            line-height: 22px;
+            color: $textBlack;
+            align-self: flex-end;
+            width: 156px;
+            margin-left: -28px;
+        }
+        &-lang {
+            writing-mode: vertical-lr;
+            transform: rotate(180deg);
+            @include font(16, 700);
+            line-height: 20px;
+            a {
+                color: $textGrey;
+            }
+            .selected {
+                color: $textBlack;
+            }
+            &.mob{
+                display: none;
+                overflow: hidden;
+            }
+        }
+    }
+    &-img {
+        max-height: 387px;
+        overflow: hidden;
+        box-shadow: 0px 3px 6px 1px rgba(0,0,0,0.24);
+        img {
+            width: 100%;
+            // max-height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+.menu-icon {
+    display: none;
+}
+

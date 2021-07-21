@@ -1,0 +1,16 @@
+.about {
+    padding: 120px 0 107px 0;
+    background-color: #F6F6F6;
+    display: flex;
+    justify-content: center;
+    &__wrapper {
+        max-width: 424px;        
+    }
+    &__title {
+        margin-bottom: 18px;
+    }
+    &__text:not(:last-child) {
+        margin-bottom: 50px;
+
+    }
+}

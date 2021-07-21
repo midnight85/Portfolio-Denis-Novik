@@ -1,0 +1,29 @@
+.portfolio {
+    background-color: #f6f6f6;
+    padding: 113px 0 96px 0;
+
+    .title {
+        margin-bottom: 47px;
+    }
+
+    &__item {
+        width: 100%;
+        &:not(:last-child) {
+            margin-bottom: 99px;
+        }
+        text-align: center;
+
+        &__img {
+            margin-bottom: 45px;
+            img {
+                width: 100%;
+            }
+        }
+        &__link {
+            font-size: 18px;
+            line-height: 22px;
+            text-decoration-line: underline;
+            color: $textBlack;
+        }
+    }
+}

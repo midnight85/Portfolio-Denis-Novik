@@ -1,0 +1,51 @@
+// обнуление
+@import "reset";
+/*подключение шрифтов*/
+@import "fonts";
+//переменные
+@import "variables";
+// миксины
+@import "mixin";
+
+body {
+    font-family: "Gilroy Medium", sans-serif;
+    font-size: 18px;
+    line-height: 22px;
+    color: #070707;
+    &.lock {
+        overflow: hidden;
+    }
+}
+.wraper {
+    min-height: 100%;
+}
+.container {
+    max-width: 960px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+.title {
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 42px;
+    text-align: center;
+    color: $textBlack;
+}
+.text {
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+}
+//  ________ blocks
+// header
+@import "blocks/header";
+//about
+@import "blocks/about";
+//skills
+@import "blocks/skills";
+//portfolio
+@import "blocks/portfolio";
+//contacts
+@import "blocks/contacts";
+//media
+@import "media";

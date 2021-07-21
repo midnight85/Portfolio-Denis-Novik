@@ -1,0 +1,176 @@
+@media (max-width: 768px) {
+    //----------------------------------menu burger----------------------------------
+    .menu-icon {
+        z-index: 5;
+        display: block;
+        position: relative;
+        width: 33px;
+        height: 18px;
+        cursor: pointer;
+        left: 90%;
+        top: 41px;
+        margin-top: 68px + 8px;
+        overflow: hidden;
+
+        & span,
+        &::before,
+        &::after {
+            left: 0;
+            position: absolute;
+            height: 16%;
+            width: 100%;
+            transition: all 0.3s ease 0s;
+            background-color: #000;
+        }
+        & span {
+            top: 50%;
+            transform: scale(1) translate(0px, -50%);
+        }
+        &::before {
+            top: 0;
+            content: "";
+        }
+        &::after {
+            bottom: 0;
+            content: "";
+        }
+
+        &._active {
+            & span {
+                transform: scale(0) translate(0px, -50%);
+            }
+            &::before {
+                top: 50%;
+                transform: rotate(-45deg) translate(0px, -50%);
+            }
+            &::after {
+                bottom: 50%;
+                transform: rotate(45deg) translate(0px, 50%);
+            }
+        }
+    }
+    .menu-body {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        padding: 66px 0 0 26px;
+        transition: left 0.3s ease 0s;
+        overflow: auto;
+        &._active {
+            left: 0;
+        }
+    }
+
+    .menu-list {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .header .menu-list {
+        li {
+            margin-bottom: 68px;
+        }
+        a {
+            font-size: 34px;
+            line-height: 42px;
+            margin-bottom: 68px;
+        }
+    }
+    .header-text {
+        display: flex;
+        flex-direction: column;
+        padding-top: 0;
+        &-about {
+            align-self: flex-start;
+            margin: 0;
+            margin-top: 23px;
+        }
+        &-lang {
+            display: none;
+        }
+    }
+    .header-text-lang.mob {
+        display: block;
+        // overflow: hidden;
+        transform: rotate(0);
+        position: relative;
+        left: 87%;
+        a,
+        span {
+            font-size: 34px;
+            line-height: 31px;
+        }
+    }
+
+    .header-menu {
+        border: none;
+        padding: 0;
+    }
+    .header {
+        position: relative;
+        top: -41px;
+        padding-bottom: 0px;
+        &-img {
+            max-height: 478px;
+        }
+    }
+    //----------------------------------menu burger----------------------------------
+    //about
+    .about {
+        padding: 60px 0 50px 0;
+        &__text:not(:last-child) {
+            margin-bottom: 25px;
+        }
+    }
+    //skills
+    .skills {
+        padding: 45px 0 55px 0;
+        &__title {
+            margin-bottom: 34px;
+        }
+        &__text {
+            margin-bottom: 70px;
+        }
+
+        &__column {
+            flex: 1 1 50%;
+        }
+    }
+    //.portfolio
+
+    .portfolio {
+        padding: 81px 0 64px 0;
+
+        &__item {
+            &:not(:last-child) {
+                margin-bottom: 77px;
+            }
+        }
+    }
+}
+@media (max-width: 424px) {
+    .skills {
+        padding-bottom: 0;
+        &__row {
+            flex-direction: column;
+        }
+        &__column {
+            margin-bottom: 80px;
+        }
+    }
+    .contacts {
+        padding: 82px 0 90px 0;
+        &__message {
+            &__btn {
+                width: 100%;
+            }
+        }
+        &__social {
+            &__img {
+                max-width: 315px;
+            }
+        }
+    }
+}
